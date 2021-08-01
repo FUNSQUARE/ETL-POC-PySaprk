@@ -1,0 +1,11 @@
+version: '2'
+services:
+  dailka:
+    container_name: built-in-pyspark-poc
+    build:
+      dockerfile: Dockerfile
+      context: .
+    entrypoint:
+      - python3
+      - main.py
+    network_mode: bridge
